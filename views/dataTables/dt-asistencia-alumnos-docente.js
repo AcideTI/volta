@@ -2,8 +2,11 @@ $(document).ready(function () {
   // Obtener la ruta actual de la URL
   var rutaActual = window.location.pathname;
 
-  // Verificar si la rutaActual contiene "volta/asistenciaAlumnosDocentes"
-  if (rutaActual.includes("/volta/asistenciaAlumnosDocentes")) {
+  // Obtener el último segmento de la ruta
+  var ultimoSegmento = rutaActual.split("/").pop();
+
+  // Verificar si el último segmento es "asistenciaAlumnosDocentes"
+  if (ultimoSegmento === "asistenciaAlumnosDocentes") {
     // Descripcion del Curso Grado para asignarle a la asistencia
     var descripcionCursoGradoGlobal = null;
     //  Obtener el tipo de docente y establecer el data table a partir de este identificador

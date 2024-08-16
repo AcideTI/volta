@@ -2,8 +2,11 @@ $(document).ready(function () {
   // Obtener la ruta actual de la URL
   var rutaActual = window.location.pathname;
 
-  // Verificar si la rutaActual contiene "volta/notasAlumnoDocente"
-  if (rutaActual.includes("/volta/notasAlumnoDocente")) {
+  // Obtener el último segmento de la ruta
+  var ultimoSegmento = rutaActual.split("/").pop();
+
+  // Verificar si el último segmento es "notasApoderado"
+  if (ultimoSegmento === "notasAlumnoDocente") {
     $(".tituloNotaAlumnoDocente").text("Notas");
     var listaIdentificadores = document.getElementById(
       "dataTableCursosNotasAlumnosDocente"

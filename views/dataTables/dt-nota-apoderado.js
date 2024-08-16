@@ -2,7 +2,12 @@
 $(document).ready(function () {
   // Obtener la ruta actual de la URL
   var rutaActual = window.location.pathname;
-  if (rutaActual.includes("/volta/notasApoderado")) {
+
+  // Obtener el último segmento de la ruta
+  var ultimoSegmento = rutaActual.split("/").pop();
+
+  // Verificar si el último segmento es "notasApoderado"
+  if (ultimoSegmento === "notasApoderado") {
     // Titulo dataTablePostulantes
     $(".tituloNotaAlumno").text("Notas Alumno");
     var columnDefsPersonal = [

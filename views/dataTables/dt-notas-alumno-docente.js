@@ -123,8 +123,10 @@ $("#modalNotasAlumnoDocente").on(
 
     // Preparar datos e imagen de fondo
     var imgBackground = new Image();
+    console.log(window.location.origin);
     imgBackground.src =
-      "http://localhost/volta/assets/img/plantilla_membretada_volta.jpg";
+      window.location.origin +
+      "/volta/assets/img/plantilla_membretada_volta.jpg";
 
     // Función para cargar imagen de fondo y generar PDF
     function generatePDF() {

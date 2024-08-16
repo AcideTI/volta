@@ -140,7 +140,7 @@
           </span>
 
           <!-- Hermanos Matriculados -->
-          <span class="border border-3 p-3">
+          <div class="border border-3 p-3">
             <div class="container row g-3">
               <div class="d-flex align-items-center justify-content-between">
                 <h3 style="font-weight: bold;">Hermanos Matriculados</h3>
@@ -152,14 +152,15 @@
 
               <div class="form-group col-md-12" id="hermanosMatriculadosDiv" style="display: none;">
                 <label for="hermanosMatriculados" class="col-form-label" style="font-weight: bold"> Alumno </label>
-                <select class="form-control input-lg busqueda" id="hermanosMatriculadosSelect" name="hermanosMatriculadosSelect"
+                <select class="form-control input-lg busqueda" id="hermanosMatriculadosSelect"
+                  name="hermanosMatriculadosSelect"
                   style="border-radius: 50px; width: 100%; border: 1px solid #dee2e6; height: 100px;">
                   <option value="">Elija una opción</option>
                   <!-- Las opciones se llenarán dinámicamente con JavaScript -->
                 </select>
               </div>
             </div>
-          </span>
+          </div>
 
           <span class="border border-3 p-3">
             <div class="container row g-3">

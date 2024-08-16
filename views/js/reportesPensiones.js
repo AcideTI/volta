@@ -649,8 +649,12 @@ function crearExcelTodosPensiones(data, nombreHoja, nombreArchivo) {
 $(document).ready(function () {
   // Obtener la ruta actual de la URL
   var rutaActual = window.location.pathname;
-  // Verificar si la rutaActual contiene "volta/inicio"
-  if (rutaActual.includes("/volta/reportePagos")) {
+
+  // Obtener el último segmento de la ruta
+  var ultimoSegmento = rutaActual.split("/").pop();
+
+  // Verificar si el último segmento es "inicio"
+  if (ultimoSegmento === "reportePagos") {
     var niveles = [];
     var pagosPendientes = [];
     var pagosRealizados = [];

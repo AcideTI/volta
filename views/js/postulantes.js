@@ -1377,18 +1377,27 @@ $(document).ready(function () {
     },
   });
 });
-// Mostrar select de opciones de toods los alumnos matriculados
+// Mostrar select de opciones de todos los alumnos matriculados
 document.addEventListener("DOMContentLoaded", function () {
-  const switchElement = document.getElementById("hermanosMatriculadosSwitch");
-  const divElement = document.getElementById("hermanosMatriculadosDiv");
+  // Obtener los parámetros de la URL
+  var params = new URLSearchParams(window.location.search);
 
-  switchElement.addEventListener("change", function () {
-    if (switchElement.checked) {
-      divElement.style.display = "block";
-    } else {
-      divElement.style.display = "none";
-    }
-  });
+  // Obtener el valor del parámetro "ruta"
+  var ruta = params.get("ruta");
+
+  // Verificar si el valor del parámetro "ruta" es "nuevoPostulante"
+  if (ruta === "nuevoPostulante") {
+    const switchElement = document.getElementById("hermanosMatriculadosSwitch");
+    const divElement = document.getElementById("hermanosMatriculadosDiv");
+
+    switchElement.addEventListener("change", function () {
+      if (switchElement.checked) {
+        divElement.style.display = "block";
+      } else {
+        divElement.style.display = "none";
+      }
+    });
+  }
 });
 // Opciones del select #hermanosMatriculadosSelect
 $("#hermanosMatriculadosSwitch").change(function () {
